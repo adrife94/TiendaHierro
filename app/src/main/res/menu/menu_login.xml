@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PrincipalActivity">
+
+    <item android:id="@+id/inicio"
+        android:title="INICIO"
+        app:showAsAction="always"/>
+    <item android:id="@+id/Deportes"
+        android:title="NFORMACION"
+        />
+    <item android:id="@+id/preguntas"
+        android:title="PREGUNTAS FRECUENTES"/>
+    <item android:id="@+id/contacto"
+        android:title="CONTACTO"/>
+
+
+
+
+</menu>
