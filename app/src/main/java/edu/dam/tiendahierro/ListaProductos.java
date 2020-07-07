@@ -35,12 +35,12 @@ public class ListaProductos extends AppCompatActivity {
     }
 
     private void fillProductos() {
-        items.add(new Productos("1","Cebolla", "1.5",R.drawable.cebolla, "Hortalizas","5"));
-        items.add(new Productos("2","Espinacas", "1.8",R.drawable.espinacas, "Verdura", "38"));
-        items.add(new Productos("3","Higo", "2.5",R.drawable.higo, "Fruta", "20"));
-        items.add(new Productos("4","Mango", "2.9",R.drawable.mango, "Fruta", "97"));
-        items.add(new Productos("6","Melon", "3.2",R.drawable.melon, "Fruta", "83"));
-        items.add(new Productos("7","Papas", "4.2",R.drawable.papas, "Tipo:","567"));
+        items.add(new Productos("1","Cebolla", "1.5",R.drawable.cebolla, "Hortalizas","5", "Juan Gonzalez Blanco"));
+        items.add(new Productos("2","Espinacas", "1.8",R.drawable.espinacas, "Verdura", "38", "Pedro Rodriguez"));
+        items.add(new Productos("3","Higo", "2.5",R.drawable.higo, "Fruta", "20", "David Silva Rodriguez"));
+        items.add(new Productos("4","Mango", "2.9",R.drawable.mango, "Fruta", "97", "Julian Cruz"));
+        items.add(new Productos("6","Melon", "3.2",R.drawable.melon, "Fruta", "83", "Juan Magan"));
+        items.add(new Productos("7","Papas", "4.2",R.drawable.papas, "Tipo:","567", "Kilian Martinez"));
        /* items.add(new Productos("8","Papaya", "2.5",R.drawable.papaya, "Fruta", 71));
         items.add(new Productos("9","Piña", "1.65",R.drawable.pina, "Fruta", 31));
         items.add(new Productos("10","Plátanos", "3.18",R.drawable.platanos, "Fruta", 74));

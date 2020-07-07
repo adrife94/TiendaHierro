@@ -36,7 +36,7 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Pr
         public CardView personCardView;
         public ImageView imgFoto;
         public Button btndetalle;
-        private TextView titulo, tipo, precio, cantidad;
+        private TextView titulo, tipo, precio, cantidad, vendedor;
 
 
 
@@ -49,10 +49,8 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Pr
             tipo = v.findViewById(R.id.tipo);
             cantidad = v.findViewById(R.id.cantidad);
             btndetalle = v.findViewById(R.id.btndetalle);
-
             precio = v.findViewById(R.id.precio);
-
-
+            vendedor = v.findViewById(R.id.vendedor);
 
         }
 
@@ -84,9 +82,27 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Pr
         final Context contexto = null;
         viewHolder.imgFoto.setImageResource(items.get(i).getImageView());
         viewHolder.titulo.setText(items.get(i).getProducto());
-        viewHolder.tipo.setText(items.get(i).getTipo());
-        viewHolder.cantidad.setText(items.get(i).getCantidad());
+        viewHolder.tipo.setText("Tipo:  " +items.get(i).getTipo());
+        viewHolder.cantidad.setText("Cantidad: " + items.get(i).getCantidad());
         viewHolder.precio.setText(items.get(i).getPrecio() + " Euros");
+        viewHolder.vendedor.setText("Vendedor: " + items.get(i).getVendedor());
+
+        viewHolder.vendedor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), VendedorActivity.class);
+                Bundle datos = new Bundle();
+                datos.putString("titulo", items.get(i).getProducto());
+                datos.putString("precio", items.get(i).getPrecio());
+                datos.putString("cantidad", items.get(i).getCantidad());
+                datos.putString("tipo", items.get(i).getTipo());
+                datos.putInt("imagen", items.get(i).getImageView());
+                intent.putExtras(datos);
+
+                v.getContext().startActivity(intent);
+            }
+
+        });
 
 
 
@@ -95,11 +111,13 @@ public class AdaptadorRecycler extends RecyclerView.Adapter<AdaptadorRecycler.Pr
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), ProductoActivity.class);
                 Bundle datos = new Bundle();
-                /*datos.putString("titulo", items.get(i).getTipo());
-                datos.putString("precio", String.valueOf(viewHolder.precio));
-                datos.putString("cantidad", String.valueOf( viewHolder.cantidad));*/
-                datos.putString("tipo", String.valueOf(viewHolder.tipo));
-              /*  datos.putString("imagen", String.valueOf(viewHolder.imgFoto));*/
+                datos.putString("titulo", items.get(i).getProducto());
+                datos.putString("precio", items.get(i).getPrecio());
+                datos.putString("cantidad", items.get(i).getCantidad());
+                datos.putString("tipo", items.get(i).getTipo());
+                datos.putInt("imagen", items.get(i).getImageView());
+                datos.putString("vendedor", items.get(i).getVendedor());
+                intent.putExtras(datos);
 
                 v.getContext().startActivity(intent);
             }

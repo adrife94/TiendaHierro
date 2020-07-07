@@ -47,7 +47,14 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:id="@+id/cantidad"
-                android:text="Cantidad"
+                android:text="Cantidad disponible: "
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/vendedor"
+                android:text="Vendedor: "
                 android:paddingTop="5dp"/>
 
             <LinearLayout

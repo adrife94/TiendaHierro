@@ -4,18 +4,31 @@ public class Productos {
     private String cantidad;
     private String producto;
     private String precio;
+    private String vendedor;
     private String id, tipo;
     private int imageView;
 
-    public Productos(String id, String producto, String precio, int imageView, String tipo, String cantidad ) {
+    public Productos(String id, String producto, String precio, int imageView, String tipo, String cantidad, String vendedor ) {
         this.precio = precio;
         this.producto = producto;
         this.id = id;
         this.imageView = imageView;
         this.tipo = tipo;
         this.cantidad = cantidad;
+        this.vendedor = vendedor;
     }
 
+    public void setCantidad(String cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public String getVendedor() {
+        return vendedor;
+    }
+
+    public void setVendedor(String vendedor) {
+        this.vendedor = vendedor;
+    }
 
     public String getCantidad() {
         return cantidad;

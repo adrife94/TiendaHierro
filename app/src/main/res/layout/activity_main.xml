@@ -14,11 +14,38 @@
         android:text="AgroHierro"
         />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nombre Usuario">
+
+    </EditText>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña">
+
+    </EditText>
+
     <Button
         android:layout_width="wrap_content"
-        android:id="@+id/btnsiguiente"
+        android:id="@+id/btnlogin"
         android:layout_height="wrap_content"
-        android:text="Siguiente"/>
+        android:text="Login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="¿No dispones de una cuenta?"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/btnregistro"
+        android:layout_height="wrap_content"
+        android:text="Registro"/>
 
 
 </LinearLayout>
